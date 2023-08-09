@@ -7,7 +7,7 @@
  }
 
 /* reset css */
-body, h1, h2, div, p, a, button {
+body, h1, h2, h3, div, p, a, button {
     margin: 0;
     padding: 0;
     font-family: 'GangwonState', sans-serif;
@@ -24,6 +24,12 @@ a, h1, h2 {
     font: inherit;
     color: inherit;
     text-decoration: none;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 button {
@@ -64,7 +70,6 @@ body {
     text-align: center;
     background-image: url(./img/bbq-bg.png);
     background-size:contain;
-    background-repeat: none;
 }
 
 .header img {
@@ -74,78 +79,103 @@ body {
 /* main */
 /* main - inform section */
 .sect-inform {
-    background-color: #F4492E;
+    background-color: #D4E7C5;
+}
+
+/* container */
+.container {
+    display: grid;
+    grid-template-areas: 
+    "left right"
+    ;
 }
 
 /* main - submit section */
+.sect-submit {
+    grid-area: left;
+}
+
 .sect-submit .form {
     width: 100%;
-    height: fit-content;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.form label {
+    font-size: 14px;
+    color: #000;
 }
 
 .form .input {
     width: 100%;
-    height: 50px;
-    color: #767676;
-    padding-left: 16px;
+    height: 27px;
+    font-size: 14px;
+    color: #000;
+    padding-left: 8px;
     background-color: #fff;
     border: 1px solid #C4C4C4;
-    border-radius: 5px;
+    border-bottom: 2px solid #A0ACB1;
+    border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     margin-bottom: 10px;
 }
 
-.form .input.pw {
-    margin-bottom: 16px;
+.form .input::placeholder {
+    color: #767676;
 }
 
 .form .input:hover {
-    border: 2px solid #F4492E;
+    border: 1px solid #F76D00;
+    border-bottom: 2px solid #F76D00;
 }
 
 .form .input:focus {
-    outline: 1px solid #2F80ED;
+    outline: 1px solid #F76D00;
 }
 
-.sect-submit .form p {
-    font-size: 14px;
-    color: #F4492E;
-    display: none;
-}
-
-.form input[type='text']:focus-visible {
+.form .input.email {
     margin-bottom: 0;
 }
 
-.btn {
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    font-weight: 500;
-    color: #767676;
-    border: 1px solid #767676;
-    border-radius: 5px;
-    background-color: #fff;
+.sect-submit .form p {
     display: inline-block;
-    text-align: center;
-    line-height: 50px;
-    overflow: auto;
+    width: 100%;
+    font-size: 6px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #638F41;
+    background-color: #D4E7C5;
+    margin: 5px 0;
+    /* display: none; */
 }
 
-.form .member {
-    width: 472px;
+.sect-submit .form p::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-image: url(./img/close.png);
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: none;
+}
+
+.btn {
+    display: inline-block;
     width: 100%;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0px 0 16px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 400;
     color: #fff;
-    border: none;
-    background-color: #2F80ED;
+    border: 1px solid #767676;
+    border-radius: 5px;
+    background-color: #F76D00;
+    text-align: center;
+    line-height: 50px;
     overflow: hidden;
 }
 
-.form .member:hover {
+.form .btn:hover {
     cursor: pointer;
 }
 
@@ -153,14 +183,39 @@ body {
 .sect-map {
     width: 100%;
     height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-area: right;
+    background-color: lightgreen;
+}
+
+.sect-map h3 {
+    /* display: inline-block; */
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.sect-map p {
+    display: inline-block;
+    color: #788991;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.sect-map p::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(./img/location.svg);
+    /* background-size: contain; */
 }
 
 /* main - map sectoin */
 .sect-map #map {
-    width: 250px;
-    height: 250px;
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
     background-color: royalblue;
 }
