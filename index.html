@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ 파티 초대장 | FES7</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/bbq.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="a11y-hidden">BBQ 참가신청 페이지</h1>
+        <a href="./">
+            <img src="./img/bbq-main.png" alt="">
+        </a>
+    </header>
+    <main>
+        <section class="sect-inform">secttion-1</section>
+        <section class="sect-submit">
+            <form class="form">
+                <label class="a11y-hidden" for="input-id">아이디</label>
+                <input class="input" id="input-id" type="text" placeholder="이름">
+                <label class="pw a11y-hidden" for="input-pw">비밀번호</label>
+                <input class="input pw" id="input-pw" type="text" placeholder="연락처">
+                <label class="pw a11y-hidden" for="input-pw">이메일</label>
+                <input class="input pw" id="input-pw" type="text" placeholder="이메일@google.com">
+                <button class="btn member" type="submit">로그인</button>
+            </form>
+        </section>
+        <section class="sect-map">
+            <h3>상세위치</h3>
+            <p>경기 안양시 만안구 예술공원로 201, 1층 바베큐장</p>
+            <div id="map"></div>
+        </section>
+    </main>
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+        };
+
+        var map = new kakao.maps.Map(container, options);
+    </script> -->
+</body>
+
+</html>
