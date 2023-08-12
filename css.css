@@ -19,6 +19,7 @@ h2,
 h3,
 p,
 dl,
+button,
 fieldset,
 form,
 body {
@@ -227,11 +228,43 @@ dt {
   outline: 1px solid #F76D00;
 }
 
-.form .input.email {
-  margin-bottom: 0;
+/* 개인정보 미입력 경고 */
+[class^="warnning"] {
+  display: none;
+  color: #f4492e;
+  font-size: 0.8rem;
+  padding-left: 5px;
 }
 
-.sect-submit .form p {
+/* 메일 전송 완료 알림 */
+.sect-submit .form .alert-container {
+  display: none;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.sect-submit .form > div > p {
   display: inline-block;
   width: 100%;
   font-size: 6px;
@@ -240,15 +273,13 @@ dt {
   color: #638F41;
   background-color: #D4E7C5;
   padding-left: 10px;
-  margin: 5px 0;
+  margin: 10px 0 5px;
   box-sizing: border-box;
-  position: relative;
   border-radius: 5px;
 }
 
-.sect-submit .form p::after {
-  content: "";
-  display: block;
+.closeButton {
+  display: inline-block;
   width: 20px;
   height: 20px;
   background-image: url(./img/close.png);
@@ -256,18 +287,32 @@ dt {
   background-position: 50%;
   background-repeat: no-repeat;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 2px;
+  top: 0;
+  translate: 0 calc(5px + (30px - 20px)/2);
+  background-color: transparent;
 }
 
-.form p::after:hover{
+.closeButton:hover{
   cursor: pointer;
-  background-color: #767676;
+  background-color: rgb(140, 164, 120, 0.3);
+  border-radius: 5px;
 }
 
-.form p::after:focus-visible {
+.closeButton:focus-visible {
   cursor: pointer;
-  background-color: #767676;
+  background-color: rgb(140, 164, 120, 0.6);
+  border-radius: 5px;
+  outline: 2px solid rgb(119, 130, 111);
+}
+
+.closeButton:focus {
+  background-color: rgb(140, 164, 120, 0.6);
+  border-radius: 5px;
+}
+
+.form p::after:active + .btn {
+  margin-top: 10px;
 }
 
 
@@ -280,6 +325,7 @@ dt {
   background-color: #F76D00;
   text-align: center;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .form .btn:hover {

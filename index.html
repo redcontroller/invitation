@@ -56,18 +56,29 @@
       <form class="form">
         <fieldset>
           <label for="input-name">이름</label>
-          <input class="input" name="name" id="input-name" type="text" placeholder="성함을 입력해주세요">
+          <input class="input" id="input-name" type="text" placeholder="이름을 입력해주세요">
+          <p class="warnning-name">😅 앗! 이름을 빠뜨리셨어요!</p>
         </fieldset>
         <fieldset>
           <label for="input-phone">연락처</label>
-          <input class="input" name="phone" id="input-phone" type="text" placeholder="전화번호를 입력해주세요">
+          <input class="input" id="input-phone" type="text" placeholder="전화번호를 입력해주세요">
+          <p class="warnning-phone">😳 으잉? 연락처를 빠뜨리셨어요!</p>
         </fieldset>
         <fieldset>
           <label for="input-email">이메일</label>
-          <input class="input email" name="email" id="input-email" type="text" placeholder="이메일@email.com">
+          <input class="input email" id="input-email" type="text" placeholder="이메일@email.com">
+          <p class="warnning-email">🙏 아참! 이메일은 꼭 적어주세요!</p>
         </fieldset>
-        <p>메일이 성공적으로 전송되었습니다.</p>
-        <button class="btn" name="submit" type="button" onclick="sendMail()" value="메일보내기">참가신청</button>
+
+        <div class="alert-container">
+          <p class="alert-email" type="button">메일이 성공적으로 전송되었습니다.</p>
+          <button class="closeButton" type="button" onclick="closeAlert()"><span class="a11y-hidden">닫기
+              버튼</span></button>
+        </div>
+        <button class="btn" type="button" onclick="sendMail()" value="메일보내기">참가신청</button>
+
+
+
       </form>
     </section>
 
@@ -359,7 +370,7 @@
   </script> -->
 
   <!-- emailJS -->
-  <script src="./index.js"></script>
+  <script src="./sendmail.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
   <script type="text/javascript">
