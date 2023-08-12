@@ -19,8 +19,6 @@
     </h1>
   </header>
 
-
-
   <main class="bbq-content">
     <!-- 파티 정보 섹션 -->
     <h2 class="bbq-sub">
@@ -56,19 +54,19 @@
       <h3>개인정보 입력 및 참가신청</h3>
       <form class="form">
         <fieldset>
-          <label for="input-id">이름</label>
-          <input class="input" id="input-id" type="text" placeholder="이름">
+          <label for="input-name">이름</label>
+          <input class="input" name="name" id="input-name" type="text" placeholder="성함을 입력해주세요">
         </fieldset>
         <fieldset>
           <label for="input-phone">연락처</label>
-          <input class="input" id="input-phone" type="text" placeholder="연락처">
+          <input class="input" name="phone" id="input-phone" type="text" placeholder="전화번호를 입력해주세요">
         </fieldset>
         <fieldset>
           <label for="input-email">이메일</label>
-          <input class="input email" id="input-email" type="text" placeholder="이메일@google.com">
+          <input class="input email" name="email" id="input-email" type="text" placeholder="이메일@email.com">
         </fieldset>
         <p>메일이 성공적으로 전송되었습니다.</p>
-        <button class="btn" type="submit">참가신청</button>
+        <button class="btn" name="submit" type="button" onclick="sendMail()" value="메일보내기">참가신청</button>
       </form>
     </section>
 
@@ -271,7 +269,8 @@
 
   <!-- 카카오맵 연동 -->
   <script type="text/javascript"
-    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1a8b4d102715a5d153e271a5cb11c808&libraries=services,clusterer,drawing"></script>
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1a8b4d102715a5d153e271a5cb11c808&libraries=services,clusterer,drawing">
+    </script>
   <script>
     var container = document.getElementById('map');
     var options = {
@@ -305,7 +304,49 @@
 
     // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
     // infowindow.open(map, marker); 
+
   </script>
+
+  <!-- jQuery -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script>
+    // $(document).ready(function () {
+    //   emailjs.init("_NOiM6oESRhr-chbr");
+    //   // 반드시 emailJS의 Account Public Key 확인
+
+    //   $('input[name=submit]').click(function () {
+
+    //     var templateParams = {
+    //       // 각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+    //       name: $('input[name=name]').val(),
+    //       phone: $('input[name=phone]').val(),
+    //       email: $('input[name=email]').val()
+    //       // message: $('textarea[name=message]').val()
+    //     };
+
+    //     emailjs.send('service_32yih44', 'template_5k1szbx', templateParams)
+    //       //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+    //       .then(function (response) {
+    //         console.log('SUCCESS!', response.status, response.text);
+    //         alert("메일이 성공적으로 전송되었습니다!");
+    //       }, function (error) {
+    //         console.log('FAILED...', error);
+    //       });
+    //   });
+    // });
+  </script> -->
+
+  <!-- emailJS -->
+  <script src="./index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("_NOiM6oESRhr-chbr");
+    })();
+  </script>
+
 </body>
 
 </html>
