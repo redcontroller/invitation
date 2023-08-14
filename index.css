@@ -76,8 +76,9 @@ body {
   font-family: "NanumSquareNeo-Variable";
 }
 
-header {
-  padding: 80px 120px;
+.bbq-logo {
+  width: 390px;
+  height: 360px;
 
   background-image: url("./img/bbq.png");
   background-size: cover;
@@ -86,27 +87,36 @@ header {
 }
 
 .bbq-logo h1 {
-  font-family: "KBO-Dia-Gothic_bold";
+margin-top: 150px;
 
-  margin-top: 110px;
-  font-size: 80px;
-  line-height: 70px;
+  font-family: "KBO-Dia-Gothic_bold";
+font-size: 4.5rem;
+  line-height: 80px;
 
   text-shadow: 5px 5px 0 #c74d27;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
 }
 
 .fes7 {
   display: block;
-  margin: 20px;
-  padding: 5px;
+    padding: 5px;
+margin: 5px;
 
-  font-size: 20px;
+  font-family: "NanumSquareNeo-Variable";
+  font-size: 1.1rem;
   font-weight: bold;
   line-height: 30px;
 
   text-shadow: none;
   background-color: #c74d27;
   color: white;
+
+  position: relative;
+  z-index: 80;
 }
 
 /* --------main------- */
@@ -125,13 +135,12 @@ header {
 }
 
 .bbq-content {
-  max-width: 420px;
+  max-width: 390px;
 
-  line-height: 2.3rem;
+  line-height: 2.5rem;
 
-  margin-top: -30px;
-  margin-bottom: 30px;
-  padding: 40px;
+  margin: -30px 30px 30px 30px;
+  padding: 30px;
   border-radius: 30px;
   box-shadow: 7px 7px 0px 0px #e56e48;
   box-sizing: border-box;
@@ -139,7 +148,6 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  opacity: 90%;
   z-index: 10;
 
   color: #4fc1ff;
@@ -169,12 +177,15 @@ dt {
   display: inline;
 }
 
-.bbq-content dd {
-  margin-left: 5px;
-  color: #985335;
+.bbq-content dt {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-indent: 2rem;
 }
 
-.bbq-content dt {
+.bbq-content dd {
+  margin-left: 5px;
+  color: #bd5c4b;
   font-weight: bold;
 }
 
@@ -264,7 +275,7 @@ dt {
   }
 }
 
-.sect-submit .form > div > p {
+.sect-submit .form .alert-container > p {
   display: inline-block;
   width: 100%;
   font-size: 6px;
@@ -273,7 +284,7 @@ dt {
   color: #638F41;
   background-color: #D4E7C5;
   padding-left: 10px;
-  margin: 10px 0 5px;
+  margin: 5px 0 0;
   box-sizing: border-box;
   border-radius: 5px;
 }
@@ -387,9 +398,13 @@ dt {
 /* SVG FIRE */
 
 .mo-fire {
+width: 420px;
   height: auto;
+
   position: fixed;
-  z-index: 4;
+  bottom: -50px;
+  z-index: 200;
+  opacity: 95%;
 }
 
 #svg-view {

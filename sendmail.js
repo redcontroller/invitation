@@ -33,7 +33,6 @@ function sendMail() {
             alert("참가신청 성공! 🙌\n메일을 확인해주세요😋😍");
 
             document.getElementsByClassName("alert-container")[0].style.display='block';
-            document.getElementsByClassName("btn")[0].style.marginTop = "0px";
             document.getElementsByClassName("alert-container")[0].
             style.animation = "fadeIn 0.8s ease forwards";
         })
