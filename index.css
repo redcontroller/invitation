@@ -511,10 +511,10 @@ dt {
     font-size: 1.1rem;
   }
 
-  .bbq-sub span,
-  .bbq-info+span {
-    font-size: 1.1rem;
-  }
+    .bbq-sub span,
+    .bbq-info+span {
+      font-size: 1.1rem;
+    }
 
   .bbq-content dt {
     font-size: 1rem;
