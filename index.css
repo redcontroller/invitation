@@ -19,6 +19,7 @@ h2,
 h3,
 p,
 dl,
+dd,
 button,
 fieldset,
 form,
@@ -67,6 +68,8 @@ button {
 /* --------header------- */
 
 body {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,10 +90,10 @@ body {
 }
 
 .bbq-logo h1 {
-margin-top: 150px;
+  margin-top: 150px;
 
   font-family: "KBO-Dia-Gothic_bold";
-font-size: 4.5rem;
+  font-size: 4.5rem;
   line-height: 80px;
 
   text-shadow: 5px 5px 0 #c74d27;
@@ -98,25 +101,18 @@ font-size: 4.5rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
 }
 
 .fes7 {
   display: block;
-    padding: 5px;
-margin: 5px;
+  width: 200px;
 
   font-family: "NanumSquareNeo-Variable";
   font-size: 1.1rem;
-  font-weight: bold;
   line-height: 30px;
 
-  text-shadow: none;
   background-color: #c74d27;
   color: white;
-
-  position: relative;
-  z-index: 80;
 }
 
 /* --------main------- */
@@ -135,20 +131,16 @@ margin: 5px;
 }
 
 .bbq-content {
-  max-width: 390px;
+  height: calc(925px + 130px);
+  /* height: fit-content; */
+  line-height: 35px;
 
-  line-height: 2.5rem;
-
-  margin: -30px 30px 30px 30px;
+  margin: -30px 30px 10px 30px;
   padding: 30px;
   border-radius: 30px;
   box-shadow: 7px 7px 0px 0px #e56e48;
-  box-sizing: border-box;
 
-  display: flex;
-  flex-direction: column;
   position: relative;
-  z-index: 10;
 
   color: #4fc1ff;
   background-color: white;
@@ -170,6 +162,7 @@ dl > span {
 
   font-size: 1.5rem;
   font-weight: bold;
+  margin: 10px 0;
 }
 
 dd,
@@ -177,16 +170,20 @@ dt {
   display: inline;
 }
 
+.bbq-content dl {
+  line-height: 30px;
+}
+
 .bbq-content dt {
   font-size: 1.1rem;
   font-weight: bold;
-  text-indent: 2rem;
+  padding-left: 0.5rem;
 }
 
 .bbq-content dd {
-  margin-left: 5px;
   color: #bd5c4b;
   font-weight: bold;
+  padding-left: 0.2rem;
 }
 
 /* main - submit section */
@@ -220,8 +217,8 @@ dt {
   color: #000;
   padding-left: 8px;
   background-color: #fff;
-  border: 1px solid #C4C4C4;
-  border-bottom: 2px solid #A0ACB1;
+  border: 1px solid #c4c4c4;
+  border-bottom: 2px solid #a0acb1;
   border-radius: 5px 5px 0 0;
   box-sizing: border-box;
 }
@@ -231,12 +228,12 @@ dt {
 }
 
 .form .input:hover {
-  border: 1px solid #F76D00;
-  border-bottom: 2px solid #F76D00;
+  border: 1px solid #f76d00;
+  border-bottom: 2px solid #f76d00;
 }
 
 .form .input:focus {
-  outline: 1px solid #F76D00;
+  outline: 1px solid #f76d00;
 }
 
 /* 개인정보 미입력 경고 */
@@ -252,7 +249,10 @@ dt {
   display: none;
   width: 100%;
   height: fit-content;
-  position: relative;
+  margin: 5px 0 0;
+  background-color: #d4e7c5;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
 @keyframes fadeIn {
@@ -281,15 +281,12 @@ dt {
   font-size: 6px;
   font-weight: 400;
   line-height: 20px;
-  color: #638F41;
-  background-color: #D4E7C5;
+  color: #638f41;
   padding-left: 10px;
-  margin: 5px 0 0;
   box-sizing: border-box;
-  border-radius: 5px;
 }
 
-.closeButton {
+.close-button {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -297,14 +294,10 @@ dt {
   background-size: 50%;
   background-position: 50%;
   background-repeat: no-repeat;
-  position: absolute;
-  right: 2px;
-  top: 0;
-  translate: 0 calc(5px + (30px - 20px)/2);
   background-color: transparent;
 }
 
-.closeButton:hover{
+.closeButton:hover {
   cursor: pointer;
   background-color: rgb(140, 164, 120, 0.3);
   border-radius: 5px;
@@ -326,15 +319,12 @@ dt {
   margin-top: 10px;
 }
 
-
 .btn {
   width: 100%;
   font-size: 14px;
-  font-weight: 400;
   color: #fff;
   border-radius: 5px;
-  background-color: #F76D00;
-  text-align: center;
+  background-color: #f76d00;
   overflow: hidden;
   margin-top: 15px;
 }
@@ -344,10 +334,9 @@ dt {
 }
 
 .form .btn:focus-visible {
-  border: 1px solid #FFF;
-  outline: 2px solid #F76D00;
+  border: 1px solid #fff;
+  outline: 2px solid #f76d00;
 }
-
 
 /* main - map section */
 
@@ -365,7 +354,7 @@ dt {
   line-height: 20px;
 }
 
-.sect-map p {
+.sect-map strong {
   /* display: inline-block; */
   color: #4d5a61;
   font-size: 0.8rem;
@@ -374,7 +363,7 @@ dt {
   padding-left: 20px;
 }
 
-.sect-map p::before {
+.sect-map strong::before {
   content: "";
   /* display: inline-block; */
   width: 18px;
@@ -384,8 +373,8 @@ dt {
   background-repeat: no-repeat;
   /* background-position: 0px 4px; */
   position: absolute;
-  left: 0px;
-  top: 9px;
+  left: 0;
+  top: -1px;
 }
 
 .sect-map #map {
@@ -393,16 +382,21 @@ dt {
   height: 60%;
   margin: 0 auto;
   background-color: royalblue;
+  border-radius: 5px;
 }
 
 /* SVG FIRE */
 
 .mo-fire {
-width: 420px;
-  height: auto;
+  /* width: 440px; */
+  width: 100vw;
+  max-width: 60vw;
+  height: fit-content;
 
   position: fixed;
-  bottom: -50px;
+  /* bottom: -50px; */
+  bottom: -80px;
+
   z-index: 200;
   opacity: 95%;
 }

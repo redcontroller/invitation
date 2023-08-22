@@ -20,6 +20,73 @@
     </h1>
   </header>
 
+  <main class="bbq-content">
+    <!-- 파티 정보 섹션 -->
+    <h2 class="bbq-sub">
+      <strong>const</strong>
+      FES7 BBQ PARTY =
+      <span> &#123; </span>
+    </h2>
+    <dl>
+      <p>
+        <dt>일시:</dt>
+        <dd>'2023년 9월 22일 (금) 오후 4시 30분'</dd>
+      </p>
+      <p>
+        <dt>장소:</dt>
+        <dd><strong>'루프탑 파티룸 스페이스 Juda'</strong></dd>
+      </p>
+      <p>
+        <dt>대상:</dt>
+        <dd>'멋사 프론트엔드 스쿨 7기 22명'</dd>
+      </p>
+      <p>
+        <dt>참가비:</dt>
+        <dd>'5만원'</dd>
+      </p>
+      <p>
+        <dt>주최:</dt>
+        <dd>'밥 잘 먹는 먹터디'</dd>
+      </p>
+      <span> &#125;; </span>
+    </dl>
+    <!-- 참가신청 섹션 -->
+    <section class="sect-submit">
+      <h3>개인정보 입력 및 참가신청</h3>
+      <form class="form">
+        <fieldset>
+          <label for="input-name">이름</label>
+          <input class="input" id="input-name" type="text" placeholder="이름을 입력해주세요">
+          <p class="warnning-name">😅 앗! 이름을 빠뜨리셨어요!</p>
+        </fieldset>
+        <fieldset>
+          <label for="input-phone">연락처</label>
+          <input class="input" id="input-phone" type="text" placeholder="전화번호를 입력해주세요">
+          <p class="warnning-phone">😳 으잉? 연락처를 빠뜨리셨어요!</p>
+        </fieldset>
+        <fieldset>
+          <label for="input-email">이메일</label>
+          <input class="input email" id="input-email" type="text" placeholder="이메일@email.com">
+          <p class="warnning-email">🙏 아참! 이메일은 꼭 적어주세요!</p>
+        </fieldset>
+
+        <button class="btn" type="button" onclick="sendMail()" value="메일보내기">참가신청</button>
+        <div class="alert-container">
+          <p class="alert-email">메일이 성공적으로 전송되었습니다.</p>
+          <button class="close-button" type="button" onclick="closeAlert()"><span class="a11y-hidden">닫기
+              버튼</span></button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 상세위치 섹션 -->
+    <section class="sect-map">
+      <h3>상세위치</h3>
+      <strong>중구 창경궁로 61 5층, 루프탑 파티룸 스페이스 Juda</strong>
+      <div id="map"></div>
+    </section>
+  </main>
+
   <div class="mo-fire">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
       x="0px" y="0px" width="1016px" height="493px" viewBox="0 0 1016 493" enable-background="new 0 0 1016 493"
@@ -208,73 +275,6 @@
           c-3.156,7.76,0.219,14.943,12.113,19.614C963.82,417.971,967.399,461.364,956.425,464.105z" />
     </svg>
   </div>
-
-  <main class="bbq-content">
-    <!-- 파티 정보 섹션 -->
-    <h2 class="bbq-sub">
-      <strong>const</strong>
-      FES7 BBQ PARTY =
-      <span> &#123; </span>
-    </h2>
-    <dl>
-      <p>
-        <dt>일시:</dt>
-        <dd>'2023년 9월 22일 (금) 오후 4시 30분'</dd>
-      </p>
-      <p>
-        <dt>장소:</dt>
-        <dd>'루프탑 파티룸 스페이스 Juda'</dd>
-      </p>
-      <p>
-        <dt>대상:</dt>
-        <dd>'멋사 프론트엔드 스쿨 7기 22명'</dd>
-      </p>
-      <p>
-        <dt>참가비:</dt>
-        <dd>'5만원'</dd>
-      </p>
-      <p>
-        <dt>주최:</dt>
-        <dd>'밥 잘 먹는 먹터디'</dd>
-      </p>
-      <span> &#125;; </span>
-    </dl>
-    <!-- 참가신청 섹션 -->
-    <section class="sect-submit">
-      <h3>개인정보 입력 및 참가신청</h3>
-      <form class="form">
-        <fieldset>
-          <label for="input-name">이름</label>
-          <input class="input" id="input-name" type="text" placeholder="이름을 입력해주세요">
-          <p class="warnning-name">😅 앗! 이름을 빠뜨리셨어요!</p>
-        </fieldset>
-        <fieldset>
-          <label for="input-phone">연락처</label>
-          <input class="input" id="input-phone" type="text" placeholder="전화번호를 입력해주세요">
-          <p class="warnning-phone">😳 으잉? 연락처를 빠뜨리셨어요!</p>
-        </fieldset>
-        <fieldset>
-          <label for="input-email">이메일</label>
-          <input class="input email" id="input-email" type="text" placeholder="이메일@email.com">
-          <p class="warnning-email">🙏 아참! 이메일은 꼭 적어주세요!</p>
-        </fieldset>
-
-        <button class="btn" type="button" onclick="sendMail()" value="메일보내기">참가신청</button>
-        <div class="alert-container">
-          <p class="alert-email" type="button">메일이 성공적으로 전송되었습니다.</p>
-          <button class="closeButton" type="button" onclick="closeAlert()"><span class="a11y-hidden">닫기
-              버튼</span></button>
-        </div>
-      </form>
-    </section>
-
-    <!-- 상세위치 섹션 -->
-    <section class="sect-map">
-      <h3>상세위치</h3>
-      <p>중구 창경궁로 61 5층, 루프탑 파티룸 스페이스 Juda</p>
-      <div id="map"></div>
-    </section>
-  </main>
 
   <!-- 카카오맵 연동 -->
   <script type="text/javascript"
