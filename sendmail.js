@@ -27,9 +27,9 @@ function sendMail() {
         emailjs
         .send(serviceID, templateID, params)
         .then((response) => {
-            params.name = "";
-            params.phone = "";
-            params.email = "";
+            document.getElementById("input-name").value = "";
+            document.getElementById("input-phone").value = "";
+            document.getElementById("input-email").value = "";
             console.log(response);
             // alert("참가신청 성공! 🙌\n메일을 확인해주세요😋😍");
 
