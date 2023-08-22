@@ -77,7 +77,7 @@ body {
 
 .container {
   width: 390px;
-  min-width: 390px;
+  min-width: 360px;
   height: fit-content;
   margin: auto auto;
   display: flex;
@@ -164,8 +164,14 @@ body {
   color: #2f64be;
 }
 
+.bbq-info {
+  width: fit-content;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 .bbq-sub span,
-dl > span {
+.bbq-info + span {
   display: inline-block;
   color: #ff6ec5;
 
@@ -486,21 +492,28 @@ dt {
   }
 }
 
-@media (max-width: 389px) {
+/* width 0 ~ 420px 까지 */
+@media (max-width: 420px) {
   .container {
     width: 100vw;
   }
 
   .bbq-logo {
-    width: 90vw;
+    width: 85vw;
   }
 
   .bbq-content {
-    width: 90vw;
+    width: 85vw;
     height: calc(925px + 170px);
   }
+
   .bbq-sub {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .bbq-sub span,
+  .bbq-info+span {
+    font-size: 1.1rem;
   }
 
   .bbq-content dt {
@@ -515,6 +528,7 @@ dt {
 
 }
 
+/* width 1060px ~ 부터 */
 @media (min-width: 1060px) {
   .bbq-content {
       height: calc(925px + 260px);
