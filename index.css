@@ -404,6 +404,7 @@ dt {
 
 .mo-fire {
   width: 60vw;
+  max-width: 762px;
   height: fit-content;
 
   position: fixed;
@@ -414,6 +415,7 @@ dt {
   opacity: 95%;
 }
 
+/* width 0 ~ 720px 까지 */
 @media (max-width: 720px) {
   .mo-fire {
     width: 400px;
