@@ -1,4 +1,4 @@
-# invitation
+# 파티 참가신청 페이지
 멋사 프론트엔드 스쿨 BBQ 파티 초대장
 - 기술 스택: HTML/CSS, Vanilla JavaScript
 - 사용된 API : Kakao Maps, emailJS
