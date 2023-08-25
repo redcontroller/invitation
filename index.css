@@ -153,6 +153,7 @@ body {
   color: #4fc1ff;
   background-color: white;
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .bbq-sub {
@@ -413,6 +414,10 @@ dt {
 
   z-index: 200;
   opacity: 95%;
+}
+
+.click-fire {
+  z-index: 0;
 }
 
 /* width 0 ~ 720px 까지 */

@@ -377,6 +377,14 @@
     (function () {
       emailjs.init("_NOiM6oESRhr-chbr");
     })();
+
+    // 불을 누르면 말풍선과 불의 레이어를 스위치
+    const fire = document.querySelector(".mo-fire");
+    fire.addEventListener('click', () => {
+      console.log("click!!");
+      fire.classList.toggle("click-fire");
+    })
+
   </script>
 
 </body>
