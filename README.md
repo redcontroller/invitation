@@ -4,6 +4,7 @@
 - 기술 스택 : HTML/CSS, Vanilla JavaScript
 - 사용된 API : Kakao Maps, emailJS
 - 웹 호스팅 서버 : Netlify
+- 배포 주소 : https://bbqpartyfes7.netlify.app/
 - 실행 환경 :
   - Windows 10
   - Chrome 116.0.5845.111 (공식 빌드) (64비트)
