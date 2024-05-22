@@ -1,6 +1,7 @@
 # 파티 참가 신청 페이지
 ### 멋사 프론트엔드 스쿨 BBQ 파티 초대장
 - 개발 목적 : **손쉬운 파티 초대와 응답**을 받을 수 있다.
+- 개발 기간 : 2023.07.21 ~ 2023.08.25
 - 기술 스택 : HTML/CSS, Vanilla JavaScript
 - 사용된 API : Kakao Maps, emailJS
 - 웹 호스팅 서버 : Netlify
